@@ -1,5 +1,6 @@
-import axios from "axios";
 import { useState, useEffect, createContext } from "react";
+import axios from "axios";
+
 
 const CategoriasContext = createContext()
 

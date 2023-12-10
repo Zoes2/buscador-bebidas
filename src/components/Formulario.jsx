@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Button, Form, Row, Col, Alert } from "react-bootstrap"
 import useCategorias from "../hooks/useCategorias"
+import useBebidas from "../hooks/useBebidas"
 
 
 const Formulario = () => {
@@ -11,6 +12,7 @@ const Formulario = () => {
     })
     const [ alerta, setAlerta ] = useState('')
     const { categorias } = useCategorias()
+    const { consultarBebida } = useBebidas()
 
     const handleSubmit = e => {
         e.preventDefault()
@@ -19,7 +21,10 @@ const Formulario = () => {
             setAlerta('Todos los campos son obligatorios')
             return
         }
-        setAlerta()
+        setAlerta('')
+        consultarBebida(busqueda)
+
+
     }
 
     return (
