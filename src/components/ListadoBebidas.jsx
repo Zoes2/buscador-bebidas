@@ -8,7 +8,7 @@ const ListadoBebidas = () => {
     const { bebidas } = useBebidas()
 
     return (
-        <Row>
+        <Row >
             {bebidas.map(bebida => (
                 <Bebida 
                     key={bebida.idDrink}
